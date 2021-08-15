@@ -1,8 +1,8 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+/* eslint-disable @next/next/no-img-element */
+import type { GetStaticPathsResult, NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
@@ -14,16 +14,21 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Contato
-        </h1>
+        <h1 className={styles.title}>Contato</h1>
 
         <nav>
-          <Link href="/"><a>Home</a></Link> -&nbsp;
-          <Link href="/sobre"><a>Sobre</a></Link> -&nbsp; 
-          <Link href="/contato"><a>Contato</a></Link>
+          <Link href="/">
+            <a>Home</a>
+          </Link>{" "}
+          -&nbsp;
+          <Link href="/sobre">
+            <a>Sobre</a>
+          </Link>{" "}
+          -&nbsp;
+          <Link href="/contato">
+            <a>Contato</a>
+          </Link>
         </nav>
-
       </main>
 
       <footer className={styles.footer}>
@@ -32,14 +37,14 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
